@@ -1,0 +1,15 @@
+{
+  "Id": "9d69e320-5410-481d-9fa2-6ba5bf802172",
+  "Title": "Project1",
+  "Description": "First Project!",
+  "Type": 0,
+  "Timelines": [
+    {
+      "Tasks": [],
+      "CreatedAt": "2025-06-22T22:54:13.0550566+03:00",
+      "Sampling": 0,
+      "Id": "09242f93-7e75-46a2-a4d7-b89f26008983",
+      "Title": "Main Timeline"
+    }
+  ]
+}
