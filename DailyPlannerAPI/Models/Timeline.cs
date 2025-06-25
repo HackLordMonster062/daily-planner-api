@@ -3,9 +3,9 @@
 		string title,
 		SamplingType sampling
 	) : TimelineItem(title) {
-		public List<TimelineItem> Tasks { get; private set; } = [];
-		public DateTime CreatedAt { get; private set; } = DateTime.Now;
-		public SamplingType Sampling { get; private set; } = sampling;
+		public List<TimelineItem> Tasks { get; init; } = [];
+		public DateTime CreatedAt { get; init; } = DateTime.Now;
+		public SamplingType Sampling { get; init; } = sampling;
 
 		public void AddTask(TimelineItem task) {
 			if (task == null) throw new ArgumentNullException(nameof(task));

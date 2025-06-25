@@ -9,7 +9,7 @@
 		public string Description { get; } = Description;
 		public ProjectType Type { get; } = type;
 
-		public List<Timeline> Timelines { get; private set; } = [];
+		public List<Timeline> Timelines { get; init; } = [];
 
 		public void AddTimeline(Timeline timeline) {
 			if (timeline == null) throw new ArgumentNullException(nameof(timeline));

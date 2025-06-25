@@ -23,6 +23,9 @@ bld/
 [Ll]og/
 [Ll]ogs/
 
+.vs/
+Data/
+
 # .NET Core
 project.lock.json
 project.fragment.lock.json
@@ -52,3 +55,26 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/dist
+/dist-ssr
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/DailyPlannerAPI/Data
