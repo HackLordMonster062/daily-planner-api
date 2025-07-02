@@ -17,6 +17,19 @@ namespace DailyPlannerAPI
 			builder.Services.AddSingleton<ProjectManager>();
 			builder.Services.AddSingleton<IStorageService, JsonFileStorage>();
 
+			var corsPolicyName = "_allowCORS";
+
+			builder.Services.AddCors(options =>
+			{
+				options.AddPolicy(name: corsPolicyName,
+					policy => {
+						policy
+							.WithOrigins("http://localhost:5173") // React dev server
+							.AllowAnyHeader()
+							.AllowAnyMethod();
+					});
+			});
+
 			var app = builder.Build();
 
 			if (app.Environment.IsDevelopment()) {
@@ -27,6 +40,8 @@ namespace DailyPlannerAPI
 			app.UseHttpsRedirection();
 			app.UseAuthorization();
 			app.MapControllers();
+
+			app.UseCors(corsPolicyName);
 
 			app.Run();
 		}

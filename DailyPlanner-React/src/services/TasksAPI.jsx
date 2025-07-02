@@ -23,6 +23,16 @@ const TaskAPI = {
                 throw error;
             }
         },
+
+        getByID: async (id) => {
+            try {
+                //const response = await axios.get(`${API_BASE_URL}/Project/${id}`)
+                alert("Get by ID not yet implemented")
+            } catch (error) {
+                console.error('Error fetching projects:', error);
+                throw error;
+            }
+        },
     
         update: async (id, updatedData) => {
             throw new NotImplementedError('Update project functionality is not implemented yet.');
